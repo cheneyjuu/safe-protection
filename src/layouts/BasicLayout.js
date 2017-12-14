@@ -126,7 +126,7 @@ class BasicLayout extends React.PureComponent {
     if (!menusData) {
       return [];
     }
-    return menusData.map((item) => {
+    return menusData.filter(item => item.isHide !== true).map((item) => {
       if (!item.name) {
         return null;
       }

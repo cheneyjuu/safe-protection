@@ -52,8 +52,19 @@ export const getNavData = app => [
         name: '用户列表',
         path: 'user-list',
         icon: 'user',
+        exact: true,
         component: dynamicWrapper(app, ['user'], () =>
           import('../routes/User/UserList')
+        ),
+      },
+      {
+        name: '用户详情',
+        path: 'user-list/:id',
+        icon: 'user',
+        exact: true,
+        isHide: true,
+        component: dynamicWrapper(app, ['user'], () =>
+          import('../routes/User/UserDetail')
         ),
       },
       {

@@ -10,12 +10,12 @@ export default {
   },
 
   effects: {
-    *fetch(_, { call, put }) {
+    *fetch({ payload }, { call, put }) {
       yield put({
         type: 'changeLoading',
         payload: true,
       });
-      const response = yield call(queryUsers);
+      const response = yield call(queryUsers, payload);
       yield put({
         type: 'save',
         payload: response,

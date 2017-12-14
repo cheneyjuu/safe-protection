@@ -6,8 +6,7 @@ export default {
   namespace: 'form',
 
   state: {
-    step: {
-    },
+    step: {},
     regularFormSubmitting: false,
     stepFormSubmitting: false,
     advancedFormSubmitting: false,
